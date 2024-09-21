@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Club</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 bg-dark text-white p-3" id="sidebar">
+                <h4 class="text-center">Menu</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="add-club.html">Add Club</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Report</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-9 p-4">
+                <h2>Add Club</h2>
+
+                <form id="eventForm" onsubmit="return addEvent()">
+                    <div class="form-group">
+                        <label for="eventName">Event Name</label>
+                        <input type="text" class="form-control" id="eventName" placeholder="Enter event name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sportType">Sport Type</label>
+                        <input type="text" class="form-control" id="sportType" placeholder="Enter sport type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numPlayers">Number of Players</label>
+                        <input type="number" class="form-control" id="numPlayers" placeholder="Enter number of players" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Add Event</button>
+                </form>
+
+                <h4 class="mt-4">Event List</h4>
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Sport Type</th>
+                            <th>Number of Players</th>
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
